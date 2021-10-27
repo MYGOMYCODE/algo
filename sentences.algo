@@ -1,0 +1,40 @@
+ALGORITHM Sentences / CHARACTER COUNT
+VAR
+    // Déclaration des variables
+    _sentenceInit : STRING;
+    _characterCount: INTEGER := 0;
+    _wordCount : INTEGER := 0;
+    _vowelCount : INTEGER:= 0;
+BEGIN
+    // Entrée de la phrase
+    WRITE("Ecrire une phrase")
+    READ (_sentenceInit)
+
+    // Condition vérifiant si l'entrée de la phrase est vide
+    IF (_sentenceInit=NULL) THEN
+    WRITE ("Merci de saisir une phrase");
+    ELSE
+    WRITE(_sentenceInit);
+
+    // Longueur de la phrase entrée
+    _characterCount := _sentenceInit.length ;
+    WRITE(_characterCount);
+
+    // Condition évaluant le nombre de mot dans la phrase entrée
+    FOR i FROM 0 TO _sentenceInit.length STEP 1 DO
+        IF (_sentenceInit[i] ==" ") THEN
+            _wordCount := _wordCount + 1;
+        END_IF
+    END_FOR
+    WRITE(_wordCount);
+
+    // Condition évaluant le nombre de voyelles dans la phrase entrée
+    FOR i FROM 0 TO _sentenceInit.length STEP 1 DO
+        IF (_sentenceInit[i] =="a" || _sentenceInit[i] =="e" || _sentenceInit[i] =="i" || _sentenceInit[i] =="o" || _sentenceInit[i] =="u") THEN
+            _vowelCount := _vowelCount + 1;
+        END_IF
+    END_FOR
+    WRITE(_vowelCount);
+    
+    END_IF
+END
