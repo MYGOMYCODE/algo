@@ -1,0 +1,38 @@
+ALGORITHM SumOffAllDistinctElements
+VAR
+    // Déclaration des variables et Initialisation
+    a : INTEGER[] := {12, 13, 6, 10};
+    b : INTEGER[] := {13, 10, 16, 15};
+    c := false;
+    sum_distinct := 0;
+BEGIN
+    // Instrustions Valeur distincte (Solution 01)
+    FOR i FROM 0 TO a.lenght-1 STEP 1  DO
+        FOR w FROM 0 TO b.lenght-1 STEP 1  DO
+            IF (a[i]==b[w]) THEN
+                c := true;
+            END_IF
+        END_FOR
+            IF (c:=false) THEN
+                sum_distinct += a[i];
+            END_IF
+    END_FOR
+END
+
+//ALGORITHM SumOffAllDistinctElements
+//VAR
+    // Déclaration des variables et Initialisation
+    //a : INTEGER[] := {12, 13, 6, 10};
+    //b : INTEGER[] := {13, 10, 16, 15};
+    //c := false;
+    //sum_distinct := 0;
+//BEGIN
+    // Instrustions Valeur distincte (Solution 02)
+    //FOR i FROM 0 TO a.lenght-1 STEP 1  DO
+        //FOR w FROM 0 TO b.lenght-1 STEP 1  DO
+        //WHILE (a[i]<>b[w]) DO
+            //sum_distinct += b[i];
+        //END_WHILE
+        //END_FOR
+    //END_FOR
+//END

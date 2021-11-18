@@ -1,0 +1,43 @@
+ALGORITHM SumOfOverlappingElements
+VAR
+    // Déclaration des variables
+    a : INTEGER[] := {12, 13, 6, 10};
+    b : INTEGER[] := {13, 10, 16, 15};
+    c := true;
+    sum_overlapping := 0;
+BEGIN
+    // instruction Valeur Non-distinct (Solution 01)
+    FOR i FROM 0 TO a.lenght-1 STEP 1  DO
+        FOR w FROM 0 TO b.lenght-1 STEP 1  DO
+            IF (a[i]<>b[w]) THEN
+                c := false;
+            END_IF
+        END_FOR
+            IF (c := true) THEN
+                a += a[i];
+                b += b[w];
+                sum_overlapping = a + b;
+            END_IF
+    END_FOR
+END
+
+
+//ALGORITHM SumOfOverlappingElements
+//VAR
+    // Déclaration des variables
+    //a : INTEGER[] := {12, 13, 6, 10};
+    //b : INTEGER[] := {13, 10, 16, 15};
+    //c := true;
+    //sum_overlapping := 0;
+//BEGIN
+    // instruction Valeur Non-distinct (Solution 02)
+    //FOR i FROM 0 TO a.lenght-1 STEP 1  DO
+        //FOR w FROM 0 TO b.lenght-1 STEP 1  DO
+            //WHILE (a[i]==b[w]) DO
+                //a += a[i];
+                //b += b[w];
+                //sum_overlapping = a + b;
+            //END_WHILE
+        //END_FOR
+    //END_FOR
+//END
